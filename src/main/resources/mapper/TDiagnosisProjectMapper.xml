@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hit.diagnosis.mapper.TDiagnosisProjectMapper">
+
+    <resultMap id="BaseResultMap" type="com.hit.diagnosis.domain.TDiagnosisProject">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="diaId" column="dia_id" jdbcType="VARCHAR"/>
+            <result property="diaName" column="dia_name" jdbcType="VARCHAR"/>
+            <result property="diaExpType" column="dia_exp_type" jdbcType="TINYINT"/>
+            <result property="diaExpLevel" column="dia_exp_level" jdbcType="TINYINT"/>
+            <result property="diaMaxPrize" column="dia_max_price" jdbcType="DECIMAL"/>
+            <result property="diaStarttime" column="dia_starttime" jdbcType="DATE"/>
+            <result property="diaEndtime" column="dia_endtime" jdbcType="DATE"/>
+            <result property="diaValid" column="dia_valid" jdbcType="TINYINT"/>
+            <result property="diaHosLevel" column="dia_hos_level" jdbcType="TINYINT"/>
+            <result property="diaApprovalmark" column="dia_approvalmark" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,dia_id,dia_name,
+        dia_exp_type,dia_exp_level,dia_max_prize,
+        dia_starttime,dia_endtime,dia_valid,
+        dia_hos_level,dia_approvalmark
+    </sql>
+</mapper>
